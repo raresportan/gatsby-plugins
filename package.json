@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Gatsby plugins",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "publish-ci": "lerna publish from-package -y",
     "lerna": "lerna",
