@@ -14,9 +14,16 @@ exports.onCreateNode = async ({ node, actions, getNode, reporter }, options) => 
         }
         const { title, description, excerpt } = node.frontmatter;
 
-        const output = path.join(
+        const outputDir = path.join(
             "./static",
-            "twitter-cards",
+            "twitter-cards");
+
+        if (!fs.existsSync(outputDir)) {
+            fs.mkdirSync(outputDir)
+        }
+
+        const output = path.join(
+            outputDir,
             slug + ".jpg"
         );
 
