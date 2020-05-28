@@ -5,7 +5,8 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raresportan/gatsby-plugins.git"
+    "url": "https://github.com/raresportan/gatsby-plugins.git",
+    "directory": "packages/gatsby-plugin-printer"
   },
   "keywords": [
     "gatsby"
@@ -22,5 +23,6 @@
   "peerDependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
-  }
+  },
+  "gitHead": "14a9cf5d97d2ded8c70ae4bc3bd96e07dbe99930"
 }
