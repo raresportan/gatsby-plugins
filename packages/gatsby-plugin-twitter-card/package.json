@@ -1,14 +1,8 @@
 {
-  "name": "gatsby-plugins",
+  "name": "@raresportan/gatsby-plugin-twitter-card",
   "version": "1.0.0",
-  "description": "Gatsby plugins",
+  "description": "A plugin that generates twitter card images using MD or MDX frontmatter",
   "main": "index.js",
-  "scripts": {
-    "publish-ci": "lerna publish from-package -y",
-    "lerna": "lerna",
-    "changeset": "changeset",
-    "test": ""
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raresportan/gatsby-plugins.git"
@@ -16,14 +10,17 @@
   "keywords": [
     "gatsby"
   ],
-  "author": "Rares Portan <rportan@gmail.com> @raresportan",
+  "author": "Rares Portan <rportan@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/raresportan/gatsby-plugins/issues"
   },
   "homepage": "https://github.com/raresportan/gatsby-plugins#readme",
-  "devDependencies": {
-    "@changesets/cli": "^2.8.0",
-    "lerna": "^3.22.0"
-  }
+  "dependencies": {
+    "twitter-card-image": "^1.0.6"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
 }
