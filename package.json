@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-plugins",
+  "version": "1.0.0",
+  "description": "Gatsby plugins",
+  "main": "index.js",
+  "scripts": {
+    "publish-ci": "lerna publish from-package -y",
+    "lerna": "lerna",
+    "changeset": "changeset",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raresportan/gatsby-plugins.git"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "author": "Rares Portan <rportan@gmail.com> @raresportan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raresportan/gatsby-plugins/issues"
+  },
+  "homepage": "https://github.com/raresportan/gatsby-plugins#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.8.0",
+    "lerna": "^3.22.0"
+  }
+}
