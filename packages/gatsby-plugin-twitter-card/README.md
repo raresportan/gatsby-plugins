@@ -13,6 +13,8 @@ npm i --save-dev gatsby-plugin-twitter-card
 ```
 
 ## gastby-config.js
+
+### Markdown (MD)
 Add the `gatsby-plugin-twitter-card` under `gatsby-transformer-remark` in plugins:
 
 ```js
@@ -67,6 +69,66 @@ module.exports = {
         ]
       }
     }
+  ]
+}
+```
+
+### MDX
+Add the `gatsby-plugin-twitter-card` directly in the plugins array, not under `gatsby-plugin-mdx`:
+
+```js
+module.exports = { 
+  plugins: [  
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [...],
+        remarkPlugins: [...],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-twitter-card`,
+      options: {
+        overwrite: false, // by default will not generate again any image that exists
+        width: 1280, // 1280 by default
+        height: 669, // 669 by default
+        templateImage: 'content/assets/twitter-card-template.jpg',
+        backgroundColor: '#fff',
+        fonts: [
+          {
+            // path to the font   
+            file: 'content/fonts/OpenSans.ttf', 
+            // map the font to a family
+            family: 'Open Sans'
+          }
+        ],
+        // add as many texts as you want
+        // you can use the frontmatter's title, description or excerpt
+        texts: [
+          {
+            text: '$title', // $description or $excerpt
+            color: '#222',
+            font: '48pt "Open Sans"',
+            x: 400,
+            y: 669 / 2,
+            maxWidth: 700,
+            lineHeight: 60
+          },
+          {
+            text: 'savethebear.com',
+            font: '26pt "Open Sans"',
+            x: 'center', // horizontal centered
+            y: 669 - 36,
+            color: '#444',
+          }
+        ],
+        borderTop: {
+          width: 30,
+          color: '#fce000'
+        }
+      }
+    },
+    ...   
   ]
 }
 ```

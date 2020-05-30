@@ -7,7 +7,7 @@ const twitterCard = require('twitter-card-image');
 exports.onCreateNode = async ({ node, actions, getNode, reporter }, options) => {
     const { createNodeField } = actions;
 
-    if (node.internal.type === `MarkdownRemark`) {
+    if (node.internal.type === `MarkdownRemark` || node.internal.type === `Mdx`) {
         let slug = createFilePath({ node, getNode });
         if (slug.endsWith('/')) {
             slug = slug.substring(0, slug.length - 1);
