@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-twitter-card",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A plugin that generates twitter card images using MD or MDX frontmatter",
   "main": "index.js",
   "repository": {
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/raresportan/gatsby-plugins#readme",
   "dependencies": {
-    "twitter-card-image": "^1.0.7"
+    "twitter-card-image": "^1.0.9"
   },
   "peerDependencies": {
     "react": "^16.8.6",
